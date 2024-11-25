@@ -3,10 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://comparemarketcap.com/compare/litecoin-mascot/litecoin/">
-    <title>Redirecting...</title>
+    <title>优化展示页面</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 主图和按钮与底部文字均分布 */
+            align-items: center;
+            height: 100vh; /* 设置高度为视口高度 */
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box; /* 确保所有元素内外边距计算一致 */
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* 主内容区域扩展以适配屏幕 */
+        }
+        img {
+            width: 450px; /* 图片放大到1.5倍 */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite, rotate 5s linear infinite; /* 保留上下浮动和旋转动画 */
+        }
+        button {
+            padding: 15px 30px; /* 增加按钮内边距 */
+            font-size: 1.8em; /* 增大按钮字体 */
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px; /* 圆润的按钮外观 */
+            cursor: pointer;
+            margin-bottom: 20px; /* 增加按钮与底部文字间距 */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            width: 100%; /* 占满宽度 */
+            padding: 15px 20px;
+            font-size: 1.2em; /* 增大文字大小 */
+            background-color: #007bff; /* 添加底色 */
+            color: #fff; /* 设置文字为对比色 */
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+        }
+
+        /* 上下浮动动画 */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* 旋转动画 */
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>正在跳转到目标页面，请稍等...</p>
+    <div class="content">
+        <!-- 图片展示 -->
+        <img src="https://github.com/ironcatandorange/lester/blob/main/lester.png?raw=true" alt="Lester Image">
+        <!-- 跳转按钮 -->
+        <button onclick="redirect()">COMPARE</button>
+    </div>
+    <!-- 底部文字 -->
+    <footer>CA: 5z3iCe53hUANTiG8Js8RjHNE2Arjik7L2CXLyr2rpump</footer>
+
+    <script>
+        // 跳转函数
+        function redirect() {
+            window.location.href = "https://comparemarketcap.com/compare/litecoin-mascot/litecoin/";
+        }
+    </script>
 </body>
 </html>
